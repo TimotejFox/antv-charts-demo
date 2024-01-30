@@ -1,10 +1,9 @@
 import './globals.css'
 import {Flex} from 'antd';
+import { Inter } from "next/font/google";
 
 import type {Children, Metadata} from "@/app/utils/interfaces";
 import {HeaderLayout} from "@/app/components/HeaderLayout";
-import {Inter} from "next/font/google";
-
 
 const inter = Inter({ subsets: ["latin"] });
 
