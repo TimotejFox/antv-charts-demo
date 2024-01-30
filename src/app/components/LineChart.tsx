@@ -3,7 +3,6 @@
 import React from "react"
 import dynamic from 'next/dynamic';
 
-import type {LineConfig} from "@/app/utils/interfaces";
 import useFetch from "@/app/utils/fetcher";
 
 const Line = dynamic(
@@ -18,10 +17,10 @@ export const LineChart: React.FC<Props> = ({url}) => {
 
     const { data, error, isLoading } = useFetch(url);
 
-    if (error) return <div>Failed to fetch characters.</div>;
+    if (error) return <div>Failed to fetch data.</div>;
     if (isLoading) return <h2>Loading...</h2>;
 
-    const config: LineConfig = {
+    const config: any = {
         data: data.data,
         xField: (d: { date: Date }) => new Date(d.date),
         yField: 'newCases',
