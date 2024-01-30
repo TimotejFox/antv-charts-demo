@@ -1,6 +1,5 @@
 import React from 'react';
-//import { Layout } from 'antd';
-//const { Header } = Layout;
+import { Header } from 'antd/es/layout/layout';
 
 interface Props {
     title: string;
@@ -19,8 +18,8 @@ const style: React.CSSProperties = {
 
 export const HeaderLayout: React.FC<Props> = ({ title }) => {
     return (
-        <div style={style}>
+        <Header style={style}>
             {title}
-        </div>
+        </Header>
     )
 }
